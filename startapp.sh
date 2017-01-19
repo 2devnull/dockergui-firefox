@@ -1,1 +1,2 @@
-TERM=xterm lxterminal
+TERM=xterm lxterminal &
+TERM=xterm firefox
