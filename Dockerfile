@@ -56,8 +56,10 @@ COPY startapp.sh /startapp.sh
 RUN \
 killall guacd && \
 /etc/init.d/tomcat7 stop && \
-dpkg --purge tomcat7 && \/var/lib/tomcat7
-dpkg --purge guacamole-server
+dpkg --purge tomcat7 && \
+dpkg --purge guacamole-server && \
+dpkg --purge oracle-java8-set-default oracle-java8-installer
+
 
 RUN \ 
 apt-get clean -y && \
