@@ -1,7 +1,7 @@
 # Builds a docker gui image
 FROM hurricane/dockergui:x11rdp1.3
 
-MAINTAINER aptalca
+MAINTAINER 2devnull
 
 #########################################
 ##        ENVIRONMENTAL CONFIG         ##
@@ -14,7 +14,7 @@ ENV USER_ID=99
 ENV GROUP_ID=100
 
 # Gui App Name default is "GUI_APPLICATION"
-ENV APP_NAME="rdp-dev"
+ENV APP_NAME="rdp-firefox"
 
 # Default resolution, change if you like
 ENV WIDTH=1280
