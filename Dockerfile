@@ -33,14 +33,9 @@ echo 'deb http://archive.ubuntu.com/ubuntu trusty-updates main universe restrict
 # Install packages needed for app
 export DEBCONF_NONINTERACTIVE_SEEN=true DEBIAN_FRONTEND=noninteractive && \
 apt-get update && \
-apt-get install -y \
-lxterminal nano && \
+apt-get install -y --no-install-recommends \
+lxterminal nano firefox && \
 
-#########################################
-##          GUI APP INSTALL            ##
-#########################################
-# Install Firefox
-apt-get install firefox --no-install-recommends && \
 apt-get -f install -y --no-install-recommends
 
 
