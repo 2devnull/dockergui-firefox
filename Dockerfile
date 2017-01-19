@@ -49,8 +49,6 @@ COPY startapp.sh /startapp.sh
 ## Remove unwated items from base images ###
 ############################################
 RUN \
-killall guacd && \
-/etc/init.d/tomcat7 stop && \
 dpkg --purge tomcat7 && \
 dpkg --purge guacamole-server && \
 dpkg --purge oracle-java8-set-default oracle-java8-installer
