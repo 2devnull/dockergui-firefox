@@ -43,6 +43,8 @@ lxterminal && \
 cd /tmp && \
 wget 'http://www.slimjet.com/download.php?version=lnx64&type=deb&beta=1&server=' -O slimjet.deb && \
 dpkg -i slimjet.deb
+apt-get -f install -y --no-install-recommends
+
 
 # Install steps for X app
 
