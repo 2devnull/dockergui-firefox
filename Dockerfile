@@ -56,8 +56,21 @@ COPY startapp.sh /startapp.sh
 RUN \
 killall guacd && \
 /etc/init.d/tomcat7 stop && \
-dpkg --purge tomcat7 && \
+dpkg --purge tomcat7 && \/var/lib/tomcat7
 dpkg --purge guacamole-server
+
+RUN \ 
+apt-get clean -y && \
+apt-get autoclean -y && \
+apt-get autoremove -y && \
+rm -rf /usr/share/locale/* && \
+rm -rf /var/cache/debconf/*-old && \
+rm -rf /var/lib/apt/lists/* && \
+rm -rf /usr/share/doc/* && \
+rm -rf /tmp/* /var/tmp/* && \
+rm -rf /var/lib/apt/lists/* /var/cache/* && \
+rm -rf /var/lib/tomcat7 /usr/share/tomcat7 /etc/service/tomcat7 && \
+rm -rf /var/lib/guacamole /etc/service/guacd
 
 
 
